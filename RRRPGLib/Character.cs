@@ -14,11 +14,14 @@ public class Character {
   /// <summary>
   /// Holds the stats for this character
   /// </summary>
-  public Stats Stats { get; private set; }
+  public Stats Stats { get; set; }
   #endregion
 
   #region Private Fields / Properties
-  private FortitudeType fortitude;
+    /// <summary>
+    /// 
+    /// </summary>
+  public FortitudeType fortitude = FortitudeType.NORMAL;
   private PictureBox pic;
   private Label lblTalk;
   private Dictionary<ImgState, Bitmap> imgMap;
@@ -42,7 +45,7 @@ public class Character {
   public Character(PictureBox pic, Label lblTalk) {
     this.pic = pic;
     this.lblTalk = lblTalk;
-    this.fortitude = FortitudeType.NORMAL;
+    this.fortitude = GetEnum();
   }
   #endregion
 
@@ -68,6 +71,41 @@ public class Character {
     c.Shutup();
     return c;
   }
+
+    /// <summary>
+    /// returns random enum for user. meant for start of game
+    /// </summary>
+    /// <returns></returns>
+    public static FortitudeType GetEnum()
+    {
+        Random random = new Random();
+        int randomNumber = random.Next(1, 101); // Generates a random number between 1 and 100 (inclusive)
+
+        if (randomNumber <= 10)
+        {
+            return FortitudeType.SCARED;
+        }
+        else if (randomNumber <= 30)
+        {
+            return FortitudeType.HOLY;
+        }
+        else if (randomNumber <= 50)
+        {
+            return FortitudeType.SHIFTY;
+        }
+        else if (randomNumber <= 70)
+        {
+            return FortitudeType.LUCKY;
+        }
+        else
+        {
+            return FortitudeType.NORMAL;
+        }
+    }
+
+    /// <summary>
+    /// meant to be called once per round
+    /// </summary>
 
   /// <summary>
   /// Create a player with the appropriate animations and dialog for the given weapon
@@ -98,7 +136,7 @@ public class Character {
   /// <returns>True if the character got shot, false otherwise</returns>
   public bool PullTrigger(Weapon weapon) {
     var result = weapon.PullTrigger(this);
-    Say(result.ToString());
+    //Say(result.ToString());
     switch (result) {
       case PullTriggerResult.GOT_SHOT:
         ShowKill();
@@ -209,19 +247,19 @@ public class Character {
   }
   private static Character MakeBowOpponent() {
     Character c = new Character();
-    c.Stats = new(luck: 0.4f, health: 100, reflex: 0.2f);
+    c.Stats = new(luck: 0.0f, health: 100, reflex: 0.0f);
     c.imgMap = new() {
       {ImgState.IDLE, Resources.GetObject("Img_Yoshi_Idle") as Bitmap },
-      {ImgState.NO_WEAPON, Resources.GetObject("Img_Yoshi_Idle") as Bitmap },
-      {ImgState.READY, Resources.GetObject("Img_Yoshi_Idle") as Bitmap },
-      {ImgState.KILL, Resources.GetObject("Img_Yoshi_Idle") as Bitmap },
+      {ImgState.NO_WEAPON, Resources.GetObject("Img_Wizard_NoWeapon") as Bitmap },
+      {ImgState.READY, Resources.GetObject("Img_Wizard_Ready") as Bitmap },
+      {ImgState.KILL, Resources.GetObject("Img_Wizard_Kill") as Bitmap },
     };
     c.dialogMap = new() {
-      {TalkState.TALK_SMACK, ("Yoshiiiiii!!!", Resources.GetStream("Snd_Yoshi_TalkSmack")) },
-      {TalkState.SAY_OW, ("Owowowowowo!!!", Resources.GetStream("Snd_Yoshi_SayOw")) },
-      {TalkState.BONED, ("Nooooooo!!", Resources.GetStream("Snd_Yoshi_Boned")) },
-      {TalkState.GUN_WENT_OFF, ("Yahooooooo!!!", Resources.GetStream("Snd_Yoshi_GunWentOff")) },
-      {TalkState.SURVIVED, ("Wahawahooooo!!",  Resources.GetStream("Snd_Yoshi_Survive")) },
+      {TalkState.TALK_SMACK, ("", null) },
+      {TalkState.SAY_OW, ("", null) },
+      {TalkState.BONED, ("", null) },
+      {TalkState.GUN_WENT_OFF, ("", null) },
+      {TalkState.SURVIVED, ("", null) },
     };
     return c;
   }
@@ -245,7 +283,7 @@ public class Character {
   }
   private static Character MakeMagicWandOpponent() {
     Character c = new Character();
-    c.Stats = new(luck: 0.4f, health: 100, reflex: 0.5f);
+    c.Stats = new(luck: 0.3f, health: 100, reflex: 0.3f);
     c.imgMap = new() {
       {ImgState.IDLE, Resources.GetObject("Img_Wizard_Idle") as Bitmap },
       {ImgState.NO_WEAPON, Resources.GetObject("Img_Wizard_NoWeapon") as Bitmap },
@@ -253,11 +291,11 @@ public class Character {
       {ImgState.KILL, Resources.GetObject("Img_Wizard_Kill") as Bitmap },
     };
     c.dialogMap = new() {
-      {TalkState.TALK_SMACK, ("Fool, but an honest fool!", Resources.GetStream("Snd_Wizard_TalkSmack")) },
-      {TalkState.SAY_OW, ("This hurts more than I thought!", Resources.GetStream("Snd_Wizard_Ow")) },
-      {TalkState.BONED, ("That didn't go as planned", Resources.GetStream("Snd_Wizard_Boned")) },
+      {TalkState.TALK_SMACK, ("I will outlast you!", null) },
+      {TalkState.SAY_OW, ("This hurts more than I thought!", null) },
+      {TalkState.BONED, ("That didn't go as planned", null) },
       {TalkState.GUN_WENT_OFF, ("Well, that sucks!", null) },
-      {TalkState.SURVIVED, ("Hahahah!\nI knew I would live!", Resources.GetStream("Snd_Wizard_Survive")) },
+      {TalkState.SURVIVED, ("I knew I would live!", null) },
     };
     return c;
   }
@@ -308,7 +346,7 @@ public class Character {
       {ImgState.KILL, Resources.GetObject("Img_Bender_Kill_MagicWand") as Bitmap },
     };
     c.dialogMap = new() {
-      {TalkState.TALK_SMACK, ("Uhhhhh..", Resources.GetStream("Bender_TalkSmack_Yoshi")) },
+      {TalkState.TALK_SMACK, ("Bite my shiny metal ass!", Resources.GetStream("Snd_Bender_BiteMyShinyMetalAss")) },
       {TalkState.SAY_OW, ("Ow ow ow!!!", null) },
       {TalkState.BONED, ("Oh, I'm boned!", Resources.GetStream("Snd_Bender_ImBoned")) },
       {TalkState.GUN_WENT_OFF, ("Oh My God!", Resources.GetStream("Snd_Bender_OhMyGod")) },
@@ -344,10 +382,10 @@ public class Character {
       {ImgState.KILL, Resources.GetObject("Img_Bender_Kill_WaterGun") as Bitmap },
     };
     c.dialogMap = new() {
-      {TalkState.TALK_SMACK, ("You will never amount to anything!", Resources.GetStream("Bender_TalkSmack_Fire")) },
+      {TalkState.TALK_SMACK, ("You look thirsty. Want some water?", null) },
       {TalkState.SAY_OW, ("It's freezing!", null) },
       {TalkState.BONED, ("Oh, I'm boned!", Resources.GetStream("Snd_Bender_ImBoned")) },
-      {TalkState.GUN_WENT_OFF, ("This might not be so bad", Resources.GetStream("Bender_Ow_Fire")) },
+      {TalkState.GUN_WENT_OFF, ("This might not be so bad", null) },
       {TalkState.SURVIVED, ("Hahahaha!", Resources.GetStream("Snd_Bender_Laugh")) },
     };
     return c;
