@@ -50,7 +50,12 @@ public class Weapon {
   /// is empty. This is currently not implemented but is definitely
   /// open for you to include in your version of the game
   /// </summary>
-  public List<bool> Chambers { get; private init; }
+  public int Chambers { get; set; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public int BulletsLoaded { get; set; }
 
   /// <summary>
   /// If you include the list of chambers, use this to hold on
@@ -106,8 +111,9 @@ public class Weapon {
   /// <param name="chanceOfMisfire">Sets field <see cref="ChanceOfMisfire"/></param>
   /// <param name="damage">Sets field <see cref="Damage"/></param>
   /// <param name="velocity">Sets field <see cref="Velocity"/></param>
-  private Weapon(List<bool> chambers, WeaponType type, float chanceOfMisfire, float damage, float velocity) {
+  private Weapon(int chambers, WeaponType type, float chanceOfMisfire, float damage, float velocity) {
     Chambers = chambers;
+    BulletsLoaded = 1;
     Type = type;
     ChanceOfMisfire = chanceOfMisfire;
     Damage = damage;
@@ -128,7 +134,8 @@ public class Weapon {
     PullTriggerResult result = PullTriggerResult.UNKNOWN;
 
     float chance = RandNumber();
-    if (chance < 1 - character.Stats.Luck) {
+
+    if (chance < ((1 - character.Stats.Luck/(float)BulletsLoaded)*((float)BulletsLoaded/(float)Chambers))) {
       chance = RandNumber();
       if (chance >= ChanceOfMisfire) {
         float chanceToDodge = Math.Max(0, character.Stats.Reflex - Velocity);
@@ -138,6 +145,7 @@ public class Weapon {
         }
         else {
           result = PullTriggerResult.GOT_SHOT;
+          BulletsLoaded --;
         }
       }
       else {
@@ -180,7 +188,7 @@ public class Weapon {
 
   private static Weapon MakeNerfRev() {
     return new Weapon(
-      chambers: new List<bool>(6),
+      chambers: 6,
       type: WeaponType.NERF_REVOLVER,
       chanceOfMisfire: 0.3f,
       damage: 25,
@@ -188,7 +196,7 @@ public class Weapon {
   }
   private static Weapon MakeCorkGun() {
     return new Weapon(
-      chambers: new List<bool>(4),
+      chambers: 4,
       type: WeaponType.CORK_GUN,
       chanceOfMisfire: 0.4f,
       damage: 40,
@@ -196,7 +204,7 @@ public class Weapon {
   }
   private static Weapon MakeWaterGun() {
     return new Weapon(
-      chambers: new List<bool>(8),
+      chambers: 8,
       type: WeaponType.WATER_GUN,
       chanceOfMisfire: 0.1f,
       damage: 20,
@@ -204,7 +212,7 @@ public class Weapon {
   }
   private static Weapon MakeBow() {
     return new Weapon(
-      chambers: new List<bool>(3),
+      chambers: 3,
       type: WeaponType.BOW,
       chanceOfMisfire: 0.2f,
       damage: 50,
@@ -212,10 +220,10 @@ public class Weapon {
   }
   private static Weapon MakeMagicWand() {
     return new Weapon(
-      chambers: new List<bool>(5),
+      chambers: 5,
       type: WeaponType.MAGIC_WAND,
       chanceOfMisfire: 0.3f,
-      damage: 100,
+      damage: 90,
       velocity: 0.2f);
   }
   #endregion
