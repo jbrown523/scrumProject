@@ -255,11 +255,11 @@ public class Character {
       {ImgState.KILL, Resources.GetObject("Img_Wizard_Kill") as Bitmap },
     };
     c.dialogMap = new() {
-      {TalkState.TALK_SMACK, ("", null) },
-      {TalkState.SAY_OW, ("", null) },
-      {TalkState.BONED, ("", null) },
-      {TalkState.GUN_WENT_OFF, ("", null) },
-      {TalkState.SURVIVED, ("", null) },
+      {TalkState.TALK_SMACK, ("Yoshiiiiii!!!", Resources.GetStream("Snd_Yoshi_TalkSmack")) },
+      {TalkState.SAY_OW, ("Owowowowowo!!!", Resources.GetStream("Snd_Yoshi_SayOw")) },
+      {TalkState.BONED, ("Nooooooo!!", Resources.GetStream("Snd_Yoshi_Boned")) },
+      {TalkState.GUN_WENT_OFF, ("Yahooooooo!!!", Resources.GetStream("Snd_Yoshi_GunWentOff")) },
+      {TalkState.SURVIVED, ("Wahawahooooo!!",  Resources.GetStream("Snd_Yoshi_Survive")) },
     };
     return c;
   }
