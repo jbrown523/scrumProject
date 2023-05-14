@@ -308,7 +308,7 @@ public class Character {
       {ImgState.KILL, Resources.GetObject("Img_Bender_Kill_MagicWand") as Bitmap },
     };
     c.dialogMap = new() {
-      {TalkState.TALK_SMACK, ("Uhhhhh..", Resources.GetStream("Bender_TalkSmack_Yoshi")) },
+      {TalkState.TALK_SMACK, ("Call me Bender", Resources.GetStream("Bender_TalkSmack_Yoshi")) },
       {TalkState.SAY_OW, ("Ow ow ow!!!", null) },
       {TalkState.BONED, ("Oh, I'm boned!", Resources.GetStream("Snd_Bender_ImBoned")) },
       {TalkState.GUN_WENT_OFF, ("Oh My God!", Resources.GetStream("Snd_Bender_OhMyGod")) },
