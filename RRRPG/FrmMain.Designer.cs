@@ -107,7 +107,7 @@
             btnDoIt.BackColor = Color.Black;
             btnDoIt.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
             btnDoIt.ForeColor = SystemColors.ButtonHighlight;
-            btnDoIt.Location = new Point(59, 678);
+            btnDoIt.Location = new Point(332, 479);
             btnDoIt.Name = "btnDoIt";
             btnDoIt.Size = new Size(225, 70);
             btnDoIt.TabIndex = 2;
@@ -144,7 +144,7 @@
             picWeaponSelectMagicWand.BackgroundImageLayout = ImageLayout.Zoom;
             picWeaponSelectMagicWand.Location = new Point(12, 10);
             picWeaponSelectMagicWand.Name = "picWeaponSelectMagicWand";
-            picWeaponSelectMagicWand.Size = new Size(128, 153);
+            picWeaponSelectMagicWand.Size = new Size(128, 129);
             picWeaponSelectMagicWand.TabIndex = 5;
             picWeaponSelectMagicWand.TabStop = false;
             picWeaponSelectMagicWand.Click += picWeaponSelectMagicWand_Click;
@@ -155,7 +155,7 @@
             lblWeaponSelectMagicWand.BackColor = Color.Black;
             lblWeaponSelectMagicWand.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblWeaponSelectMagicWand.ForeColor = Color.White;
-            lblWeaponSelectMagicWand.Location = new Point(46, 166);
+            lblWeaponSelectMagicWand.Location = new Point(54, 153);
             lblWeaponSelectMagicWand.Name = "lblWeaponSelectMagicWand";
             lblWeaponSelectMagicWand.Size = new Size(57, 21);
             lblWeaponSelectMagicWand.TabIndex = 6;
@@ -176,7 +176,7 @@
             panWeaponSelect.Controls.Add(picWeaponSelectCorkGun);
             panWeaponSelect.Controls.Add(picWeaponSelectMagicWand);
             panWeaponSelect.Controls.Add(lblWeaponSelectMagicWand);
-            panWeaponSelect.Location = new Point(507, 636);
+            panWeaponSelect.Location = new Point(507, 566);
             panWeaponSelect.Name = "panWeaponSelect";
             panWeaponSelect.Size = new Size(566, 229);
             panWeaponSelect.TabIndex = 7;
@@ -186,7 +186,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(12, 11);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
+            comboBox1.Size = new Size(25, 23);
             comboBox1.TabIndex = 16;
             comboBox1.DrawItem += comboBox1_DrawItem;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -197,7 +197,7 @@
             lblWeaponSelectBow.BackColor = Color.Black;
             lblWeaponSelectBow.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblWeaponSelectBow.ForeColor = Color.White;
-            lblWeaponSelectBow.Location = new Point(500, 166);
+            lblWeaponSelectBow.Location = new Point(501, 148);
             lblWeaponSelectBow.Name = "lblWeaponSelectBow";
             lblWeaponSelectBow.Size = new Size(43, 21);
             lblWeaponSelectBow.TabIndex = 15;
@@ -210,7 +210,7 @@
             picWeaponSelectBow.BackgroundImageLayout = ImageLayout.Zoom;
             picWeaponSelectBow.Location = new Point(466, 11);
             picWeaponSelectBow.Name = "picWeaponSelectBow";
-            picWeaponSelectBow.Size = new Size(100, 152);
+            picWeaponSelectBow.Size = new Size(100, 128);
             picWeaponSelectBow.TabIndex = 14;
             picWeaponSelectBow.TabStop = false;
             picWeaponSelectBow.Click += picWeaponSelectBow_Click;
@@ -221,7 +221,7 @@
             lblWeaponSelectNerfRev.BackColor = Color.Black;
             lblWeaponSelectNerfRev.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblWeaponSelectNerfRev.ForeColor = Color.White;
-            lblWeaponSelectNerfRev.Location = new Point(351, 166);
+            lblWeaponSelectNerfRev.Location = new Point(354, 148);
             lblWeaponSelectNerfRev.Name = "lblWeaponSelectNerfRev";
             lblWeaponSelectNerfRev.Size = new Size(115, 21);
             lblWeaponSelectNerfRev.TabIndex = 13;
@@ -234,7 +234,7 @@
             picWeaponSelectNerfRev.BackgroundImageLayout = ImageLayout.Zoom;
             picWeaponSelectNerfRev.Location = new Point(358, 11);
             picWeaponSelectNerfRev.Name = "picWeaponSelectNerfRev";
-            picWeaponSelectNerfRev.Size = new Size(100, 152);
+            picWeaponSelectNerfRev.Size = new Size(100, 128);
             picWeaponSelectNerfRev.TabIndex = 12;
             picWeaponSelectNerfRev.TabStop = false;
             picWeaponSelectNerfRev.Click += picWeaponSelectNerfRev_Click;
@@ -257,7 +257,7 @@
             lblWeaponSelectWaterGun.BackColor = Color.Black;
             lblWeaponSelectWaterGun.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblWeaponSelectWaterGun.ForeColor = Color.White;
-            lblWeaponSelectWaterGun.Location = new Point(258, 165);
+            lblWeaponSelectWaterGun.Location = new Point(258, 153);
             lblWeaponSelectWaterGun.Name = "lblWeaponSelectWaterGun";
             lblWeaponSelectWaterGun.Size = new Size(90, 21);
             lblWeaponSelectWaterGun.TabIndex = 10;
@@ -269,7 +269,7 @@
             lblWeaponSelectCorkGun.BackColor = Color.Black;
             lblWeaponSelectCorkGun.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblWeaponSelectCorkGun.ForeColor = Color.White;
-            lblWeaponSelectCorkGun.Location = new Point(156, 165);
+            lblWeaponSelectCorkGun.Location = new Point(156, 153);
             lblWeaponSelectCorkGun.Name = "lblWeaponSelectCorkGun";
             lblWeaponSelectCorkGun.Size = new Size(80, 21);
             lblWeaponSelectCorkGun.TabIndex = 9;
@@ -282,7 +282,7 @@
             picWeaponSelectWaterGun.BackgroundImageLayout = ImageLayout.Zoom;
             picWeaponSelectWaterGun.Location = new Point(252, 10);
             picWeaponSelectWaterGun.Name = "picWeaponSelectWaterGun";
-            picWeaponSelectWaterGun.Size = new Size(100, 152);
+            picWeaponSelectWaterGun.Size = new Size(100, 129);
             picWeaponSelectWaterGun.TabIndex = 8;
             picWeaponSelectWaterGun.TabStop = false;
             picWeaponSelectWaterGun.Click += picWeaponSelectWaterGun_Click;
@@ -294,7 +294,7 @@
             picWeaponSelectCorkGun.BackgroundImageLayout = ImageLayout.Zoom;
             picWeaponSelectCorkGun.Location = new Point(146, 10);
             picWeaponSelectCorkGun.Name = "picWeaponSelectCorkGun";
-            picWeaponSelectCorkGun.Size = new Size(100, 152);
+            picWeaponSelectCorkGun.Size = new Size(100, 129);
             picWeaponSelectCorkGun.TabIndex = 7;
             picWeaponSelectCorkGun.TabStop = false;
             picWeaponSelectCorkGun.Click += picWeaponSelectCorkGun_Click;
@@ -305,7 +305,7 @@
             SurvivalLabel.BackColor = SystemColors.ActiveCaptionText;
             SurvivalLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             SurvivalLabel.ForeColor = SystemColors.ControlLightLight;
-            SurvivalLabel.Location = new Point(391, 637);
+            SurvivalLabel.Location = new Point(393, 620);
             SurvivalLabel.Name = "SurvivalLabel";
             SurvivalLabel.Size = new Size(71, 24);
             SurvivalLabel.TabIndex = 16;
@@ -318,7 +318,7 @@
             AmmoLabel.BackColor = SystemColors.ActiveCaptionText;
             AmmoLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             AmmoLabel.ForeColor = SystemColors.ControlLightLight;
-            AmmoLabel.Location = new Point(136, 637);
+            AmmoLabel.Location = new Point(136, 621);
             AmmoLabel.Name = "AmmoLabel";
             AmmoLabel.Size = new Size(50, 24);
             AmmoLabel.TabIndex = 14;
@@ -331,7 +331,7 @@
             UpBtn.BackColor = SystemColors.ActiveCaptionText;
             UpBtn.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             UpBtn.ForeColor = SystemColors.ControlLightLight;
-            UpBtn.Location = new Point(206, 634);
+            UpBtn.Location = new Point(192, 620);
             UpBtn.Margin = new Padding(3, 2, 3, 2);
             UpBtn.Name = "UpBtn";
             UpBtn.Size = new Size(52, 25);
@@ -347,7 +347,7 @@
             DownBtn.BackColor = SystemColors.ActiveCaptionText;
             DownBtn.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             DownBtn.ForeColor = SystemColors.ControlLightLight;
-            DownBtn.Location = new Point(77, 637);
+            DownBtn.Location = new Point(84, 620);
             DownBtn.Margin = new Padding(3, 2, 3, 2);
             DownBtn.Name = "DownBtn";
             DownBtn.Size = new Size(46, 25);
@@ -363,7 +363,7 @@
             AmmoText.BackColor = SystemColors.ActiveCaptionText;
             AmmoText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             AmmoText.ForeColor = SystemColors.ControlLightLight;
-            AmmoText.Location = new Point(129, 604);
+            AmmoText.Location = new Point(113, 588);
             AmmoText.Name = "AmmoText";
             AmmoText.Size = new Size(59, 20);
             AmmoText.TabIndex = 13;
@@ -377,7 +377,7 @@
             HealthLabel.BackColor = SystemColors.ActiveCaptionText;
             HealthLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             HealthLabel.ForeColor = SystemColors.ControlLightLight;
-            HealthLabel.Location = new Point(346, 704);
+            HealthLabel.Location = new Point(619, 505);
             HealthLabel.Name = "HealthLabel";
             HealthLabel.Size = new Size(102, 20);
             HealthLabel.TabIndex = 17;
@@ -390,7 +390,7 @@
             SurvivalText.BackColor = SystemColors.ActiveCaptionText;
             SurvivalText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             SurvivalText.ForeColor = SystemColors.ControlLightLight;
-            SurvivalText.Location = new Point(289, 603);
+            SurvivalText.Location = new Point(301, 588);
             SurvivalText.Name = "SurvivalText";
             SurvivalText.Size = new Size(163, 20);
             SurvivalText.TabIndex = 15;
@@ -403,7 +403,7 @@
             FortLabel.BackColor = SystemColors.ActiveCaptionText;
             FortLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             FortLabel.ForeColor = SystemColors.ControlLightLight;
-            FortLabel.Location = new Point(301, 670);
+            FortLabel.Location = new Point(301, 650);
             FortLabel.Name = "FortLabel";
             FortLabel.Size = new Size(178, 20);
             FortLabel.TabIndex = 18;
@@ -416,7 +416,7 @@
             btnStart.BackColor = Color.Black;
             btnStart.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
             btnStart.ForeColor = SystemColors.ButtonHighlight;
-            btnStart.Location = new Point(288, 689);
+            btnStart.Location = new Point(561, 490);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(225, 70);
             btnStart.TabIndex = 8;
