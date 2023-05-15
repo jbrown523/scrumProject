@@ -318,6 +318,26 @@ namespace RRRPG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Inkedstarlordpic {
+            get {
+                object obj = ResourceManager.GetObject("Inkedstarlordpic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mainstarlord {
+            get {
+                object obj = ResourceManager.GetObject("mainstarlord", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream Mus_Title_Bg_Music {
@@ -341,6 +361,16 @@ namespace RRRPG.Properties {
         internal static System.IO.UnmanagedMemoryStream Mus_Title_Bg_Music_3 {
             get {
                 return ResourceManager.GetStream("Mus_Title_Bg_Music_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nerfpic {
+            get {
+                object obj = ResourceManager.GetObject("nerfpic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -458,6 +488,26 @@ namespace RRRPG.Properties {
         internal static System.IO.UnmanagedMemoryStream Snd_Yoshi_TalkSmack {
             get {
                 return ResourceManager.GetStream("Snd_Yoshi_TalkSmack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap starlordpic {
+            get {
+                object obj = ResourceManager.GetObject("starlordpic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap starlordready {
+            get {
+                object obj = ResourceManager.GetObject("starlordready", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

@@ -227,25 +227,26 @@ public class Character {
     };
     return c;
   }
-  private static Character MakeCorkGunOpponent() {
-    Character c = new Character();
-    c.Stats = new(luck: 0.0f, health: 100, reflex: 0.0f);
-    c.imgMap = new() {
-      {ImgState.IDLE, Resources.GetObject("Img_Shadow_Idle") as Bitmap },
-      {ImgState.NO_WEAPON, Resources.GetObject("Img_Wizard_NoWeapon") as Bitmap },
-      {ImgState.READY, Resources.GetObject("Img_Wizard_Ready") as Bitmap },
-      {ImgState.KILL, Resources.GetObject("Img_Wizard_Kill") as Bitmap },
+    private static Character MakeCorkGunOpponent()
+    {
+        Character c = new Character();
+        c.Stats = new(luck: 0.4f, health: 100, reflex: 0.7f);
+        c.imgMap = new() {
+      {ImgState.IDLE, Resources.GetObject("Inkedstarlordpic") as Bitmap },
+      {ImgState.NO_WEAPON, Resources.GetObject("Inkedstarlordpic") as Bitmap },
+      {ImgState.READY, Resources.GetObject("starlordready") as Bitmap },
+      {ImgState.KILL, Resources.GetObject("Inkedstarlordpic") as Bitmap },
     };
-    c.dialogMap = new() {
-      {TalkState.TALK_SMACK, ("", null) },
-      {TalkState.SAY_OW, ("", null) },
-      {TalkState.BONED, ("", null) },
-      {TalkState.GUN_WENT_OFF, ("", null) },
-      {TalkState.SURVIVED, ("", null) },
+        c.dialogMap = new() {
+      {TalkState.TALK_SMACK, ("I like your plan, execpt it sucks. Gonna beat you!", null) },
+      {TalkState.SAY_OW, ("You have some skills.", null) },
+      {TalkState.BONED, ("This might not be good. I need my Awesome Mix.", null) },
+      {TalkState.GUN_WENT_OFF, ("Oh no. Well of course I have issues!", null) },
+      {TalkState.SURVIVED, ("I beat you!", null) },
     };
-    return c;
-  }
-  private static Character MakeBowOpponent() {
+        return c;
+    }
+    private static Character MakeBowOpponent() {
     Character c = new Character();
     c.Stats = new(luck: 0.0f, health: 100, reflex: 0.0f);
     c.imgMap = new() {
@@ -263,25 +264,26 @@ public class Character {
     };
     return c;
   }
-  private static Character MakeNerfRevolverOpponent() {
-    Character c = new Character();
-    c.Stats = new(luck: 0.0f, health: 100, reflex: 0.0f);
-    c.imgMap = new() {
-      {ImgState.IDLE, Resources.GetObject("Img_Shadow_Idle") as Bitmap },
-      {ImgState.NO_WEAPON, Resources.GetObject("Img_Wizard_NoWeapon") as Bitmap },
-      {ImgState.READY, Resources.GetObject("Img_Wizard_Ready") as Bitmap },
-      {ImgState.KILL, Resources.GetObject("Img_Wizard_Kill") as Bitmap },
+    private static Character MakeNerfRevolverOpponent()
+    {
+        Character c = new Character();
+        c.Stats = new(luck: 0.8f, health: 100, reflex: 0.4f);
+        c.imgMap = new() {
+      {ImgState.IDLE, Resources.GetObject("nerfpic") as Bitmap },
+      {ImgState.NO_WEAPON, Resources.GetObject("nerfpic") as Bitmap },
+      {ImgState.READY, Resources.GetObject("nerfpic") as Bitmap },
+      {ImgState.KILL, Resources.GetObject("nerfpic") as Bitmap },
     };
-    c.dialogMap = new() {
-      {TalkState.TALK_SMACK, ("", null) },
-      {TalkState.SAY_OW, ("", null) },
-      {TalkState.BONED, ("", null) },
-      {TalkState.GUN_WENT_OFF, ("", null) },
-      {TalkState.SURVIVED, ("", null) },
+        c.dialogMap = new() {
+      {TalkState.TALK_SMACK, ("You will not win!Muhaha dude.", null) },
+      {TalkState.SAY_OW, ("Oh no, I've been hit!", null) },
+      {TalkState.BONED, ("That sucked.", null) },
+      {TalkState.GUN_WENT_OFF, ("Bang goes me.", null) },
+      {TalkState.SURVIVED, ("I survived!!", null) },
     };
-    return c;
-  }
-  private static Character MakeMagicWandOpponent() {
+        return c;
+    }
+    private static Character MakeMagicWandOpponent() {
     Character c = new Character();
     c.Stats = new(luck: 0.3f, health: 100, reflex: 0.3f);
     c.imgMap = new() {
