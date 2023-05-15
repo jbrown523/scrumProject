@@ -23,6 +23,13 @@ namespace RRRPG
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            this.comboBox1.Items.Clear(); // No duplicate bindings
+            string[] imgs = Directory.GetFiles("C:\\Users\\jalen\\OneDrive\\Desktop\\403\\scrumFinal\\SKINS");
+            foreach (string s in imgs)
+            {
+                comboBox1.Items.Add(s);
+            }
+
             soundPlayer = new SoundPlayer(Resources.Mus_Title_Bg_Music);
             soundPlayer.PlayLooping();
             btnDoIt.Visible = false;
@@ -38,6 +45,7 @@ namespace RRRPG
         {WeaponType.NERF_REVOLVER, (picWeaponSelectNerfRev, lblWeaponSelectNerfRev) },
       };
             SelectWeapon(WeaponType.MAGIC_WAND);
+
         }
 
         public void HUDRefresh()
@@ -201,7 +209,7 @@ namespace RRRPG
                     state = 3;
                     tmrStateMachine.Interval = 2200;
                     tmrStateMachine.Enabled = true;
-                    
+
                     HideHUD();
                 }
                 else
@@ -313,6 +321,17 @@ namespace RRRPG
         private void AmmoLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            // e.Graphics.DrawImage(comboBox1.Items.Add("C:/Users/jalen/OneDrive/Desktop/403/scrumFinal/RRRPG/Data/Images/Img_Magic_Wand2.png"));
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string s = comboBox1.SelectedItem.ToString();
+            this.picWeaponSelectMagicWand.Image = new Bitmap(s);
         }
     }
 }
